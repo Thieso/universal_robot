@@ -60,11 +60,11 @@
     <xacro:property name="upper_arm_inertia_offset" value="0.175" />  <!-- measured from model -->
 
     <!-- This is for compatibility reasons, as transformation between base and base_link was always 180 degree in the ur_description -->
-    <xacro:property name="base_correction" value="${pi}" />
+    <xacro:property name="base_correction" value="0" />
 
     <link name="${prefix}base_link" >
       <visual>
-        <origin xyz="0 0 0" rpy="0 0 ${base_correction}"/>
+        <origin xyz="0 0 0.025" rpy="0 0 ${base_correction}"/>
         <geometry>
           <mesh filename="package://ur_e_description/meshes/ur10e/visual/base.dae"/>
         </geometry>
